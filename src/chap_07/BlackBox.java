@@ -6,5 +6,6 @@ public class BlackBox {
     String resolution;
     int price;
     String color;
+    static boolean canAutoReport = false;
 
 }
