@@ -6,7 +6,25 @@ public class BlackBox {
     String resolution;
     int price;
     String color;
+    int serialNumber;
+    static int counter = 0;
     static boolean canAutoReport = false;
+
+    BlackBox() {
+        System.out.println("기본 생성자 호출");
+        this.serialNumber = ++counter;
+        System.out.println("새로운 시리얼 넘버를 발급받았습니다 : " + this.serialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color) {
+        this();
+
+        System.out.println("사용자 정의 생성자 호출");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+    }
 
     void  autoReport() {
         if (canAutoReport) {
